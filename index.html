@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client-Side Image Enhancer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Enhancer</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <div class="image-container">
+            <canvas id="previewCanvas"></canvas>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Brightness: <span id="brightnessValue">100</span>%</label>
+                <input type="range" id="brightness" min="0" max="200" value="100">
+            </div>
+            <div class="control-group">
+                <label>Contrast: <span id="contrastValue">100</span>%</label>
+                <input type="range" id="contrast" min="0" max="200" value="100">
+            </div>
+            <div class="control-group">
+                <label>Saturation: <span id="saturationValue">100</span>%</label>
+                <input type="range" id="saturation" min="0" max="200" value="100">
+            </div>
+            <div class="control-group">
+                <label>Sharpness: <span id="sharpnessValue">0</span></label>
+                <input type="range" id="sharpness" min="0" max="10" value="0">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="resetBtn">Reset</button>
+            <button id="downloadBtn">Download</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
